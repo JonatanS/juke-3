@@ -4,6 +4,7 @@ app.controller('ArtistsCtrl', function ($scope, $rootScope, ArtistFactory) {
 		$scope.artists = artists;
 	});
 	$rootScope.$on('changeView', function (evt, data) {
+		console.log("Got it");
 		$scope.showMe = (data.name == 'allArtists');
 	});
 	$scope.viewArtist = function (artistId) {
