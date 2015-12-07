@@ -36,6 +36,7 @@ app.config(function ($stateProvider) {
 	});
 	$stateProvider.state('artist.songs', {
         templateUrl: '/templates/artists/songs.html',
-        url: '/artists/:id/songs'
+        url: '/artists/:id/songs',
+        controller: 'AlbumCtrl'
 	});
 });

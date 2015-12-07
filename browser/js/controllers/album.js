@@ -4,8 +4,10 @@ app.controller('AlbumCtrl', function ($scope, $rootScope, PlayerFactory, AlbumFa
 		var current = PlayerFactory.getCurrentSong();
 		return current && current._id == song._id;
 	};
-	$scope.start = function (song) {
-		PlayerFactory.start(song, $scope.album.songs);
+	$scope.start = function (song, optionalSongList) {
+		//console.log('OPT:' + optionalSongList);
+		var songs = optionalSongList ? optionalSongList : $scope.album.songs;
+		PlayerFactory.start(song, songs);
 	};
 
 	AlbumFactory.fetchById($stateParams.id)

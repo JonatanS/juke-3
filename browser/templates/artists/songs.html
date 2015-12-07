@@ -10,7 +10,7 @@
   <tbody>
     <tr ng-repeat="song in artist.songs" ng-class="{active: isCurrent(song)}">
       <td>
-        <button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
+        <button ng-hide="isCurrent(song)" ng-click="start(song, artist.songs)" class="btn btn-default btn-xs">
           <span class="glyphicon glyphicon-play"></span>
         </button>
       </td>
